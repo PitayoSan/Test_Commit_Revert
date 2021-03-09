@@ -10,3 +10,6 @@ def add(raw_content):
   for element in contents:
     if not element.isnumeric():
       raise ValueError("only integers allowed - {}".format(element))
+
+  numeric_contents = [int(number) for number in contents]
+  return sum(numeric_contents)
