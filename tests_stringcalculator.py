@@ -9,7 +9,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_non_numeric_value(self):
-        self.assertRaises(ValueError, stringcalculator.add, "1,&")
+        self.assertRaises(ValueError, stringcalculator.add, "1,a")
 
 
 if __name__ == '__main__':
