@@ -30,5 +30,9 @@ class TestStringMethods(unittest.TestCase):
         self.assertRaises(ValueError, stringcalculator.add, "/\n1,2,3")
 
 
+    def test_no_negative_numbers(self):
+        self.assertRaises(ValueError, stringcalculator.add, "1,-2")
+
+
 if __name__ == '__main__':
     unittest.main()
