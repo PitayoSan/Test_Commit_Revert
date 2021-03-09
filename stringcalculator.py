@@ -6,7 +6,8 @@ def add(raw_content):
   if len(raw_content) == 0: return 0
 
   # Case 2: one or more arguments
-  contents = split(',|\n', raw_content)
+  default_delimiter = ',|\n'
+  contents = split(default_delimiter, raw_content)
   for element in contents:
     if not element.isnumeric():
       raise ValueError("only integers allowed - {}".format(element))
