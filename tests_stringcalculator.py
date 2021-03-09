@@ -18,6 +18,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_non_numeric_value(self):
         self.assertRaises(ValueError, stringcalculator.add, "1,a")
+        self.assertRaises(ValueError, stringcalculator.add, "a")
 
     
     def test_new_line_as_valid_delimiter(self):
