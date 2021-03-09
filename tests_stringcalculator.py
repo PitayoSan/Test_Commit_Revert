@@ -20,9 +20,13 @@ class TestStringMethods(unittest.TestCase):
         self.assertRaises(ValueError, stringcalculator.add, "1,a")
 
     
-    def test_new_line_as_delimiter(self):
+    def test_new_line_as_valid_delimiter(self):
         self.assertEqual(stringcalculator.add("1,2\n3"), 6)
         self.assertRaises(ValueError, stringcalculator.add, "1,\n3")
+
+
+    def test_custom_delimiter_declaration(self):
+        self.assertEqual(stringcalculator.add(";\n1;2;3"), 6)
 
 
 if __name__ == '__main__':
