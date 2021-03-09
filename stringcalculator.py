@@ -18,6 +18,8 @@ def add(raw_content):
   split_content = split(current_delimiter, content)
   for element in split_content:
     if not element.isnumeric():
+      if '-' in element:
+        raise ValueError("negatives not allowed - {}".format(element))
       raise ValueError("only integers allowed - {}".format(element))
 
   numeric_contents = [int(number) for number in split_content]
