@@ -9,9 +9,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_non_numeric_value(self):
-        with self.assertRaises(ValueError) as context:
-            stringcalculator.add("1,a")
-        self.assertTrue('only integers allowed - a' in context.exception)
+        self.assertRaises(ValueError, stringcalculator.add, "1,a")
 
 
 if __name__ == '__main__':
