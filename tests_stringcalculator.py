@@ -27,6 +27,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_custom_delimiter_declaration(self):
         self.assertEqual(stringcalculator.add(";\n1;2;3"), 6)
+        self.assertRaises(ValueError, stringcalculator.add, "[\n1,2,3")
 
 
 if __name__ == '__main__':
