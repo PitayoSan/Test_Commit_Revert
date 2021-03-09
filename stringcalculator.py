@@ -2,5 +2,6 @@
 
 
 def add(raw_content):
-  
-  return 0
+  # Case 1: empty string
+  if len(raw_content) == 0: return 0
+
