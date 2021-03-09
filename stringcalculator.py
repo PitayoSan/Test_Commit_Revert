@@ -1,6 +1,6 @@
 
 
 
-def Add(a):
-  #Add implementation
+def add(raw_content):
+  
   return 0
