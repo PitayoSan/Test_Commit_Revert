@@ -8,6 +8,14 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(stringcalculator.add(""), 0)
 
 
+    def test_one_arg(self):
+        self.assertEqual(stringcalculator.add("1"), 1)
+
+
+    def test_two_args(self):
+        self.assertEqual(stringcalculator.add("1,2"), 3)
+
+
     def test_non_numeric_value(self):
         self.assertRaises(ValueError, stringcalculator.add, "1,a")
 
