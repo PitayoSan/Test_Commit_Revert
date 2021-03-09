@@ -19,6 +19,11 @@ class TestStringMethods(unittest.TestCase):
     def test_non_numeric_value(self):
         self.assertRaises(ValueError, stringcalculator.add, "1,a")
 
+    
+    def test_new_line_as_delimiter(self):
+        self.assertEqual(stringcalculator.add("1,2\n3"), 6)
+        self.assertEqual(stringcalculator.add("1,\n3"), 4)
+
 
 if __name__ == '__main__':
     unittest.main()
