@@ -9,7 +9,7 @@ def add(raw_content):
   current_delimiter = ',|\n'
   content = raw_content
 
-  # Delimeter detection
+  # Custom delimeter detection
   if len(raw_content) >= 3 and raw_content[1] == '\n':
     current_delimiter = raw_content[0]
     content = raw_content[2:]
